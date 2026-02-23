@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Developer Portfolio Generator</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Markdown Parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+  <!-- Drag & Drop Library -->
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+</head>
+
+<body class="light">
+
+<header>
+  <h1>Portfolio Generator</h1>
+
+  <button onclick="setTheme('light')">Light</button>
+  <button onclick="setTheme('dark')">Dark</button>
+  <button onclick="setTheme('blue')">Blue</button>
+
+  <input type="file" id="fileInput" accept=".md" />
+  <input type="file" id="profileImage" accept="image/*" />
+
+  <button onclick="downloadHTML()">Download Website</button>
+</header>
+
+<div class="container">
+  <textarea id="markdownInput">
+# Your Name
+## Full Stack Developer
+
+## Skills
+- JavaScript
+- HTML
+- CSS
+
+## Projects
+- Portfolio Generator
+  </textarea>
+
+  <div id="previewContainer">
+    <img id="previewImage" />
+    <div id="preview"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
